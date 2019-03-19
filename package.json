@@ -1,0 +1,26 @@
+{
+	"name": "hfsnippets",
+	"displayName": "HybridForms Snippets",
+	"description": "Integrates HybridForms HTML snippets into VS Code",
+	"version": "1.1.2",
+	"publisher": "icomedias",
+	"icon": "HF_Extension_icon.png",
+	"engines": {
+		"vscode": "^1.28.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "html",
+				"path": "./html-snippets.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./javascript-snippets.json"
+			}
+		]
+	}
+}

@@ -1,0 +1,101 @@
+{
+	"JavaScript Starting Point": {
+		"prefix": "hf-js",
+		"body": [
+			"/* ESLint no-undef-rule: define globals to prevent ESLint errors */",
+            "/* global $ WinJS IcoWinJS kendo HFWinJS HybridForms Icomedias HFFormdefinition */",
+            "",
+            "(function () {",
+                "\t'use strict'; // forcing browser to strict mode JavaScript",
+            "",
+            "})();",
+            "//# sourceURL=${1:filename}.js"
+		],
+		"description": "Custom Javascript starting point"
+    },
+    "JavaScript derived Custom Control": {
+        "prefix": "hf-derive",
+		"body": [
+			"${1:DerivedCustomControl}: WinJS.Class.derive(",
+                "\tHybridForms.API.UIControls.BaseControl,",
+                "\tfunction(element, options) {",
+                    "\t\tHybridForms.API.UIControls.BaseControl.call(this, element, options);",
+                "\t},",
+                "\t{",
+                    "\t\t// instance properties",
+                    "\t\t_privateProp1: null,",
+                    "\t\tpublicProp1: null,",
+                    "",
+                    "\t\t// instance methods",
+                    "\t\t_init: function(element) {",
+                        "\t\t\t// _init Method gets called in BaseControl.",
+                        "\t\t\t// call the BaseControl _init Method with the call-Method",
+                        "\t\t\tHybridForms.API.UIControls.BaseControl.prototype._init.call(this, element);",
+                    "\t\t},",
+                        "",
+                    "\t\tcreateControl: function() { // will be called by base class",
+                        "\t\t\t// private", 
+                        "\t\t\tconsole.log('createControl');",
+                        "",
+                        "\t\t\t// return a promise here, when all ui relevant work is done!",
+                        "\t\t\treturn Promise.resolve()",
+                        "\t\t},",
+                        "",
+                    "\t\tregisterEvents: function() { // will be called by base class",
+                        "\t\t\t// registerEvents here",
+                        "\t\t\tconsole.log('registerEvents');",
+                    "\t\t},",
+                        "",
+                    "\t\tdispose: function() {",
+                        "\t\t\tif (this.disposed) {",
+                            "\t\t\t\treturn;",
+                        "\t\t\t}",
+                        "\t\t\tthis.disposed = true;",
+                    "\t\t}",
+                "\t},",
+                "\t{",
+                    "\t\t//Static methods",
+                "\t},",
+            ")"
+		],
+		"description": "JavaScript derived Custom Control"
+    },
+    "JavaScript onChange event handler": {
+		"prefix": "hf-onchange",
+		"body": [
+			"WinJS.Namespace.define('HFFormdefinition.${1:SomeNamespace}', {",
+                "\t${2:doSomethingOnChange}: function(value) {",
+                    "\t\tconsole.log('value: ', value);",
+                    "\t\tconsole.log('ctrl: ', this);",
+                "\t}",
+            "});",
+            "",
+            "WinJS.Utilities.markSupportedForProcessing(HFFormdefinition.${1:SomeNamespace}.${2:doSomethingOnChange});"
+		],
+		"description": "JavaScript onChange event handler"
+    },
+    "Get and Set values": {
+        "prefix": "hf-set",
+        "body": [
+            "var ${1:ctrl} = HybridForms.API.FormControls.getCtrl('${2:formcontrol_id}');",
+            "${1:ctrl}.val('${3:set some value}');"
+        ],
+        "description": "Get and set values"
+    },
+    "Get value of a Field": {
+        "prefix": "hf-field",
+        "body": [
+            "var ${1:field} = HybridForms.API.Fields.getById(${2:id});"
+        ],
+        "description": "Get value of a field"
+    },
+    "Cope with RepeatingUnits": {
+        "prefix": "hf-repeating",
+        "body": [
+            "if (HybridForms.API.RepeatingUnits.isRepeatingUnit(${1:this.element})) {",
+                "\tvar currentRu = HybridForms.API.RepeatingUnits.getPostfixFieldId(${1:this.element});",
+            "}"
+        ],
+        "description": "Get post fix of a repeating unit"
+    }
+}

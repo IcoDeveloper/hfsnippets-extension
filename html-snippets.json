@@ -1,0 +1,244 @@
+{
+	"Condition": {
+		"scope": "html",
+		"prefix": "hf-conditions",
+		"body": [
+			"<div id=\"${1:id}\"",
+			"\t data-win-control=\"HFWinJSCtrl.Condition\"",
+			"\t data-hf-condition='{",
+				"\t\t\"cond\": [ { \"type\": \"$2\", \"id\": \"$3\" }$4 ]",
+			"\t }'>",
+			"\t$5",
+			"</div>"
+		],
+		"description": "Creates a block, area, tab, condition definition"
+	},
+
+	"Page Condition": {
+		"scope": "html",
+		"prefix": "hf-pagecondition",
+		"body": [
+			"<li data-hf-title=\"$1\"", 
+			"\tdata-hf-condition='{",
+				"\t\t\"cond\": [{ \"type\": \"$2\", \"id\": \"$3\"$4}$5]",
+			"\t}'>",
+			"\t<ol>",
+				"\t\t$6",
+			"\t</ol>",
+			"</li>"
+		],
+		"description": "Creates a Page condition definition"
+	},
+
+	"Template Condition": {
+		"scope": "html",
+		"prefix": "hf-templatecondition",
+		"body": [
+			"<li data-hf-title=\"${1:Tab Name}\"", 
+			"\tdata-hf-condition='{",
+				"\t\t\"cond\": [ { \"type\": \"$2\", \"id\": \"$3\"$4}$5]",
+				"\t}'>",
+				"\t$6",
+				"</li>"
+		],
+		"description": "Creates a Template condition definition"
+	},
+
+	"Template": {
+		"scope": "html",
+		"prefix": "hf-block",
+		"body": [
+			"<div id=\"${1:id}\"", 
+			"\t data-win-control=\"WinJS.Binding.Template\">",
+				"\t$2",
+			"</div>"
+		],
+		"description": "Creates an empty block container"
+	},
+
+	"Button": {
+		"scope": "html",
+		"prefix": "hf-button",
+		"body": [
+			"<div id=\"${1:id}\"",
+			"\t data-win-control=\"HFWinJSCtrl.ApproveFormButton\"",
+			"\t data-win-options=\"{$2}\"></div>"
+		],
+		"description": "Creates a Button"
+	},
+
+	"CheckBox": {
+		"scope": "html",
+		"prefix": "hf-checkbox",
+		"body": [
+			"<input id=\"${1:id}\"", 
+			"\t   type=\"checkbox\"",
+			"\t   value=\"${2:value}\"", 
+			"\t   data-win-control=\"HFWinJSCtrl.CheckBox\"",  
+			"\t   data-win-options=\"{$3}\" />"
+		],
+		"description": "Creates a Checkbox"
+	},
+
+	"ComboBox": {
+		"scope": "html",
+		"prefix": "hf-combobox",
+		"body": [
+			"<div id=\"${1:id}\"",
+			"\t data-win-control=\"HFWinJSCtrl.ComboBox\"",
+			"\t data-win-options=\"{$2}\"></div>"
+		],
+		"description": "Creates a Combobox input field"
+	},
+
+	"DatePicker": {
+		"scope": "html",
+		"prefix": "hf-datepicker",
+		"body": [
+			"<div id=\"${1:id}\"",
+			"\t data-win-control=\"HFWinJSCtrl.DatePicker\"",
+			"\t data-win-options=\"{$2}\"></div>"
+		],
+		"description": "Creates a Datepicker input field"
+	},
+
+	"InkControl": {
+		"scope": "html",
+		"prefix": "hf-inkcontrol",
+		"body": [
+			"<div id=\"${1:id}\"",
+			"\t data-win-control=\"HFWinJSCtrl.InkControl\"",
+			"\t data-win-options=\"{$2}\"></div>"
+		],
+		"description": "Creates a Inkcontrol input field"
+	},
+
+	"Label": {
+		"scope": "html",
+		"prefix": "hf-label",
+		"body": [
+			"<div id=\"${1:id}\"",
+			"\t data-win-control=\"HFWinJSCtrl.Label\"",
+			"\t data-win-options=\"{ label: '$2' }\"></div>"
+		],
+		"description": "Creates a Label"
+	},
+
+	"MapButton": {
+		"scope": "html",
+		"prefix": "hf-mapbutton",
+		"body": [
+			"<div id=\"${1:id}\"",
+			"\t class=\"pdf-hide\"",
+			"\t data-win-control=\"HFWinJSCtrl.MapButton\"",
+			"\t data-win-options=\"{$2}\"></div>"
+		],
+		"description": "Creates a Map Button"
+	},
+
+	"NumericField": {
+		"scope": "html",
+		"prefix": "hf-numericfield",
+		"body": [
+			"<div id=\"${1:id}\"",
+			"\t data-win-control=\"HFWinJSCtrl.NumericField\"",
+			"\t data-win-options=\"{$2}\"></div>"
+		],
+		"description": "Creates a Numeric input field"
+	},
+
+	"PhoneButton": {
+		"scope": "html",
+		"prefix": "hf-phonebutton",
+		"body": [
+			"<div id=\"${1:id}\"",
+			"\t class=\"pdf-hide\"",
+			"\t data-win-control=\"HFWinJSCtrl.PhoneButton\"",
+			"\t data-win-options=\"{$2}\"></div>"
+		],
+		"description": "Creates a Phone Button"
+	},
+
+	"PicturePicker": {
+		"scope": "html",
+		"prefix": "hf-picturepicker",
+		"body": [
+			"<div id=\"${1:id}\"",
+			"\t data-win-control=\"HFWinJSCtrl.PicturePicker\"",
+			"\t data-win-options=\"{$2}\"></div>"
+		],
+		"description": "Creates a Picture Picker"
+	},
+		
+	"RadioBox": {
+		"scope": "html",
+		"prefix": "hf-radiobox",
+		"body": [
+			"<input id=\"${1:id}\"",
+			"\t   type=\"radio\"", 
+			"\t   name=\"${2:name}\"", 
+			"\t   value=\"${3:value}\"", 
+			"\t   data-win-control=\"HFWinJSCtrl.RadioBox\"", 
+			"\t   data-win-options=\"{$4}\" />"
+		],
+		"description": "Creates a RadioBox input field"
+	},
+
+	"ReverseGeolocatorButton": {
+		"scope": "html",
+		"prefix": "hf-reversegeolocatorbutton",
+		"body": [
+			"<div id=\"${1:id}\"",
+			"\t data-win-control=\"HFWinJSCtrl.ReverseGeolocatorButton\"",
+			"\t data-win-options=\"{$2}\"></div>"
+		],
+		"description": "Creates a Reverse Geolocator Button"
+	},
+
+	"SelectBox": {
+		"scope": "html",
+		"prefix": "hf-selectbox",
+		"body": [
+			"<select id=\"${1:id}\"",
+			"\t\tdata-win-control=\"HFWinJSCtrl.SelectBox\"",
+			"\t\tdata-win-options=\"{$2}\">",
+			"\t<option value=\"${3:value}\"></option>",
+			"</select>"
+		],
+		"description": "Creates a Selectbox"
+	},
+
+	"Signature": {
+		"scope": "html",
+		"prefix": "hf-signature",
+		"body": [
+			"<div id=\"${1:id}\"",
+			"\t data-win-control=\"HFWinJSCtrl.Signature\"",
+			"\t data-win-options=\"{$2}\"></div>"
+		],
+		"description": "Creates a Signature input field"
+	},
+
+	"Text Field": {
+		"scope": "html",
+		"prefix": "hf-textfield",
+		"body": [
+			"<input id=\"${1:id}\"", 
+			"\t   type=\"${2:text}\"", 
+			"\t   data-win-control=\"HFWinJSCtrl.TextField\"", 
+			"\t   data-win-options=\"{$3}\" />"
+		],
+		"description": "Creates a Text input field"
+	},
+
+	"TimePicker": {
+		"scope": "html",
+		"prefix": "hf-timepicker",
+		"body": [
+			"<div id=\"${1:id}\"",
+			"\t data-win-control=\"HFWinJSCtrl.TimePicker\"",
+			"\t data-win-options=\"{$2}\"></div>"
+		],
+		"description": "Creates a Time Picker input field"
+	}
+}
