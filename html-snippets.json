@@ -56,17 +56,6 @@
 		"description": "Creates an empty block container"
 	},
 
-	"Button": {
-		"scope": "html",
-		"prefix": "hf-button",
-		"body": [
-			"<div id=\"${1:id}\"",
-			"\t data-win-control=\"HFWinJSCtrl.ApproveFormButton\"",
-			"\t data-win-options=\"{$2}\"></div>"
-		],
-		"description": "Creates a Button"
-	},
-
 	"CheckBox": {
 		"scope": "html",
 		"prefix": "hf-checkbox",
@@ -75,7 +64,7 @@
 			"\t   type=\"checkbox\"",
 			"\t   value=\"${2:value}\"", 
 			"\t   data-win-control=\"HFWinJSCtrl.CheckBox\"",  
-			"\t   data-win-options=\"{$3}\" />"
+			"\t   data-win-options=\"{ label: '$3', list: ${4:true}, defaultValue: ${5:true}}\" />"
 		],
 		"description": "Creates a Checkbox"
 	},
@@ -134,17 +123,6 @@
 			"\t data-win-options=\"{$2}\"></div>"
 		],
 		"description": "Creates a Map Button"
-	},
-
-	"NumericField": {
-		"scope": "html",
-		"prefix": "hf-numericfield",
-		"body": [
-			"<div id=\"${1:id}\"",
-			"\t data-win-control=\"HFWinJSCtrl.NumericField\"",
-			"\t data-win-options=\"{$2}\"></div>"
-		],
-		"description": "Creates a Numeric input field"
 	},
 
 	"PhoneButton": {

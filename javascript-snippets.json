@@ -38,7 +38,7 @@
                         "\t\t\tconsole.log('createControl');",
                         "",
                         "\t\t\t// return a promise here, when all ui relevant work is done!",
-                        "\t\t\treturn Promise.resolve()",
+                        "\t\t\treturn Promise.resolve();",
                         "\t\t},",
                         "",
                     "\t\tregisterEvents: function() { // will be called by base class",
@@ -56,7 +56,7 @@
                 "\t{",
                     "\t\t//Static methods",
                 "\t},",
-            ")"
+            "),"
 		],
 		"description": "JavaScript derived Custom Control"
     },

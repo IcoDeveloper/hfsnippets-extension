@@ -28,14 +28,12 @@ hf-block | Creates an empty block container
 hf-conditions | Creates a block, area, tab, condition definition
 hf-pagecondition | Creates a Page condition definition
 hf-templatecondition | Creates a Template condition definition
-hf-button | Creates a Button
 hf-checkbox | Creates a Checkbox
 hf-combobox | Creates a Combobox input field
 hf-datepicker | Creates a Datepicker input field
 hf-inkcontrol | Creates a Inkcontrol input field
 hf-label | Creates a Label
 hf-mapbutton | Creates a Map Button
-hf-numericfield | Creates a Numeric input field
 hf-phonebutton | Creates a Phone Button
 hf-picturepicker | Creates a Picture Picker
 hf-radiobox | Creates a RadioBox input field
