@@ -31,8 +31,11 @@ hf-templatecondition | Creates a Template condition definition
 hf-checkbox | Creates a Checkbox
 hf-combobox | Creates a Combobox input field
 hf-datepicker | Creates a Datepicker input field
+hf-drawingcontrol | Creates a Drawingcontrol input field
+hf-htmlcontainer | Creates a HtmlContainer input element
 hf-inkcontrol | Creates a Inkcontrol input field
 hf-label | Creates a Label
+hf-mailbutton | Creates a Mail Button
 hf-mapbutton | Creates a Map Button
 hf-phonebutton | Creates a Phone Button
 hf-picturepicker | Creates a Picture Picker
