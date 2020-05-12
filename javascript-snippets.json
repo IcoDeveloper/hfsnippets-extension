@@ -3,11 +3,19 @@
 		"prefix": "hf-js",
 		"body": [
 			"/* ESLint no-undef-rule: define globals to prevent ESLint errors */",
-            "/* global $ WinJS IcoWinJS kendo HFWinJS HybridForms Icomedias HFFormdefinition */",
+            "/* global WinJS HybridForms Promise HFFormdefinition $ */",
             "",
             "(function () {",
                 "\t'use strict'; // forcing browser to strict mode JavaScript",
             "",
+                "\tWinJS.Namespace.define('HFFormdefinition.${1:SomeNamespace}', {",
+                    "\t\t${2:doSomethingOnChange}: function(value) {",
+                        "\t\t\tconsole.log('value: ', value);",
+                        "\t\t\tconsole.log('ctrl: ', this);",
+                    "\t\t},",
+                "\t});",
+                "",
+                "\tWinJS.Utilities.markSupportedForProcessing(HFFormdefinition.${1:SomeNamespace}.${2:doSomethingOnChange});",
             "})();",
             "//# sourceURL=${1:filename}.js"
 		],
@@ -60,40 +68,27 @@
 		],
 		"description": "JavaScript derived Custom Control"
     },
-    "JavaScript onChange event handler": {
-		"prefix": "hf-onchange",
-		"body": [
-			"WinJS.Namespace.define('HFFormdefinition.${1:SomeNamespace}', {",
-                "\t${2:doSomethingOnChange}: function(value) {",
-                    "\t\tconsole.log('value: ', value);",
-                    "\t\tconsole.log('ctrl: ', this);",
-                "\t}",
-            "});",
-            "",
-            "WinJS.Utilities.markSupportedForProcessing(HFFormdefinition.${1:SomeNamespace}.${2:doSomethingOnChange});"
-		],
-		"description": "JavaScript onChange event handler"
-    },
     "Get and Set values": {
         "prefix": "hf-set",
         "body": [
-            "var ${1:ctrl} = HybridForms.API.FormControls.getCtrl('${2:formcontrol_id}');",
-            "${1:ctrl}.val('${3:set some value}');"
+            "const ${1:ctrl} = HybridForms.API.FormControls.getCtrl('${2:formcontrol_id}');",
+            "${1:ctrl}.val(${3});"
         ],
         "description": "Get and set values"
     },
     "Get value of a Field": {
         "prefix": "hf-field",
         "body": [
-            "var ${1:field} = HybridForms.API.Fields.getById(${2:id});"
+            "const ${1:field} = HybridForms.API.Fields.getById(${2:id});"
         ],
         "description": "Get value of a field"
     },
     "Cope with RepeatingUnits": {
         "prefix": "hf-repeating",
         "body": [
+            "let postfix;",
             "if (HybridForms.API.RepeatingUnits.isRepeatingUnit(${1:this.element})) {",
-                "\tvar currentRu = HybridForms.API.RepeatingUnits.getPostfixFieldId(${1:this.element});",
+                "\tpostfix = HybridForms.API.RepeatingUnits.getPostfixFieldId(${1:this.element});",
             "}"
         ],
         "description": "Get post fix of a repeating unit"
