@@ -1,7 +1,7 @@
 {
 	"Condition": {
 		"scope": "html",
-		"prefix": "hf-conditions",
+		"prefix": "hf-condition",
 		"body": [
 			"<div id=\"${1:id}\" data-win-control=\"HFWinJSCtrl.Condition\"",
 			"\tdata-hf-condition='{\"cond\": [",
@@ -59,7 +59,7 @@
 		"prefix": "hf-checkbox",
 		"body": [
 			"<input id=\"${1:id}\" type=\"checkbox\" value=\"${2:value}\" data-win-control=\"HFWinJSCtrl.CheckBox\"",  
-			"\tdata-win-options=\"{$3}\" />"
+			"\tdata-win-options=\"{{$3}}\" />"
 		],
 		"description": "Creates a Checkbox"
 	},
@@ -69,7 +69,7 @@
 		"prefix": "hf-combobox",
 		"body": [
 			"<div id=\"${1:id}\" data-win-control=\"HFWinJSCtrl.ComboBox\"",
-			"\tdata-win-options=\"{$2}\"></div>"
+			"\tdata-win-options=\"{{$2}}\"></div>"
 		],
 		"description": "Creates a Combobox input field"
 	},
@@ -79,7 +79,7 @@
 		"prefix": "hf-datepicker",
 		"body": [
 			"<div id=\"${1:id}\" data-win-control=\"HFWinJSCtrl.DatePicker\"",
-			"\tdata-win-options=\"{$2}\"></div>"
+			"\tdata-win-options=\"{{$2}}\"></div>"
 		],
 		"description": "Creates a Datepicker input field"
 	},
@@ -89,7 +89,7 @@
 		"prefix": "hf-drawingcontrol",
 		"body": [
 			"<div id=\"${1:id}\" data-win-control=\"HFWinJSCtrl.DrawingControl\"",
-			"\tdata-win-options=\"{$2}\"></div>"
+			"\tdata-win-options=\"{{$2}}\"></div>"
 		],
 		"description": "Creates a Drawingcontrol input field"
     },
@@ -99,7 +99,7 @@
 		"prefix": "hf-htmlcontainer",
 		"body": [
 			"<div id=\"${1:id}\" data-win-control=\"HFWinJSCtrl.HtmlContainer\"",
-			"\tdata-win-options=\"{$2}\"></div>"
+			"\tdata-win-options=\"{{$2}}\"></div>"
 		],
 		"description": "Creates a HtmlContainer input element"
     },
@@ -109,7 +109,7 @@
 		"prefix": "hf-inkcontrol",
 		"body": [
 			"<div id=\"${1:id}\" data-win-control=\"HFWinJSCtrl.InkControl\"",
-			"\tdata-win-options=\"{$2}\"></div>"
+			"\tdata-win-options=\"{{$2}}\"></div>"
 		],
 		"description": "Creates a Inkcontrol input field"
 	},
@@ -119,7 +119,7 @@
 		"prefix": "hf-label",
 		"body": [
 			"<div id=\"${1:id}\" data-win-control=\"HFWinJSCtrl.Label\"",
-			"\tdata-win-options=\"{$2}\"></div>"
+			"\tdata-win-options=\"{{$2}}\"></div>"
 		],
 		"description": "Creates a Label"
 	},
@@ -129,7 +129,7 @@
 		"prefix": "hf-mailbutton",
 		"body": [
 			"<div id=\"${1:id}\" class=\"pdf-hide\" data-win-control=\"HFWinJSCtrl.MailButton\"",
-			"\tdata-win-options=\"{$2}\"></div>"
+			"\tdata-win-options=\"{{$2}}\"></div>"
 		],
 		"description": "Creates a Mail Button"
 	},
@@ -139,9 +139,19 @@
 		"prefix": "hf-mapbutton",
 		"body": [
 			"<div id=\"${1:id}\" class=\"pdf-hide\" data-win-control=\"HFWinJSCtrl.MapButton\"",
-			"\tdata-win-options=\"{$2}\"></div>"
+			"\tdata-win-options=\"{{$2}}\"></div>"
 		],
 		"description": "Creates a Map Button"
+	},
+
+    "NumericField": {
+		"scope": "html",
+		"prefix": "hf-numericfield",
+		"body": [
+			"<div id=\"${1:id}\" data-win-control=\"HFWinJSCtrl.NumericField\"", 
+			"\tdata-win-options=\"{{$2}}\"></div>"
+		],
+		"description": "Creates a NumericField input field"
 	},
 
 	"PhoneButton": {
@@ -149,7 +159,7 @@
 		"prefix": "hf-phonebutton",
 		"body": [
 			"<div id=\"${1:id}\" class=\"pdf-hide\" data-win-control=\"HFWinJSCtrl.PhoneButton\"",
-			"\tdata-win-options=\"{$2}\"></div>"
+			"\tdata-win-options=\"{{$2}}\"></div>"
 		],
 		"description": "Creates a Phone Button"
 	},
@@ -159,7 +169,7 @@
 		"prefix": "hf-picturepicker",
 		"body": [
 			"<div id=\"${1:id}\" data-win-control=\"HFWinJSCtrl.PicturePicker\"",
-			"\tdata-win-options=\"{$2}\"></div>"
+			"\tdata-win-options=\"{{$2}}\"></div>"
 		],
 		"description": "Creates a Picture Picker"
 	},
@@ -169,7 +179,7 @@
 		"prefix": "hf-radiobox",
 		"body": [
 			"<input id=\"${1:id}\" type=\"radio\" name=\"${2:name}\" value=\"${3:value}\" data-win-control=\"HFWinJSCtrl.RadioBox\"",
-			"\tdata-win-options=\"{$4}\" />"
+			"\tdata-win-options=\"{{$4}}\" />"
 		],
 		"description": "Creates a RadioBox input field"
 	},
@@ -179,7 +189,7 @@
 		"prefix": "hf-reversegeolocatorbutton",
 		"body": [
 			"<div id=\"${1:id}\" class=\"pdf-hide\" data-win-control=\"HFWinJSCtrl.ReverseGeolocatorButton\"",
-			"\tdata-win-options=\"{$2}\"></div>"
+			"\tdata-win-options=\"{{$2}}\"></div>"
 		],
 		"description": "Creates a Reverse Geolocator Button"
 	},
@@ -189,7 +199,7 @@
 		"prefix": "hf-selectbox",
 		"body": [
 			"<select id=\"${1:id}\" data-win-control=\"HFWinJSCtrl.SelectBox\"",
-			"\tdata-win-options=\"{$2}\">",
+			"\tdata-win-options=\"{{$2}}\">",
 			"\t<option value=\"${3:value}\"></option>",
 			"</select>"
 		],
@@ -201,7 +211,7 @@
 		"prefix": "hf-signature",
 		"body": [
 			"<div id=\"${1:id}\" data-win-control=\"HFWinJSCtrl.Signature\"",
-			"\tdata-win-options=\"{$2}\"></div>"
+			"\tdata-win-options=\"{{$2}}\"></div>"
 		],
 		"description": "Creates a Signature input field"
 	},
@@ -211,7 +221,7 @@
 		"prefix": "hf-textfield",
 		"body": [
 			"<input id=\"${1:id}\" type=\"${2:text}\" data-win-control=\"HFWinJSCtrl.TextField\"", 
-			"\tdata-win-options=\"{$3}\" />"
+			"\tdata-win-options=\"{{$3}}\" />"
 		],
 		"description": "Creates a Text input field"
 	},
@@ -221,7 +231,7 @@
 		"prefix": "hf-timepicker",
 		"body": [
 			"<div id=\"${1:id}\" data-win-control=\"HFWinJSCtrl.TimePicker\"",
-			"\tdata-win-options=\"{$2}\"></div>"
+			"\tdata-win-options=\"{{$2}}\"></div>"
 		],
 		"description": "Creates a Time Picker input field"
 	}

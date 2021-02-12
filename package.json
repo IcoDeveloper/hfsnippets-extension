@@ -1,30 +1,38 @@
 {
-	"name": "hfsnippets",
-	"displayName": "HybridForms Snippets",
-	"description": "Integrates HybridForms snippets into VS Code",
-	"version": "1.2.2",
-	"publisher": "icomedias",
-	"icon": "HF_Extension_icon.png",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/IcoDeveloper/hfsnippets-extension.git"
-	},
-	"engines": {
-		"vscode": "^1.28.0"
-	},
-	"categories": [
-		"Snippets"
-	],
-	"contributes": {
-		"snippets": [
-			{
-				"language": "html",
-				"path": "./html-snippets.json"
-			},
-			{
-				"language": "javascript",
-				"path": "./javascript-snippets.json"
-			}
-		]
-	}
+    "name": "hfsnippets",
+    "displayName": "HybridForms Snippets",
+    "description": "Integrates HybridForms snippets into VS Code",
+    "version": "1.2.3",
+    "publisher": "icomedias",
+    "icon": "HF_Extension_icon.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/IcoDeveloper/hfsnippets-extension.git"
+    },
+    "engines": {
+        "vscode": "^1.28.0"
+    },
+    "scripts": {
+        "package": "npx vsce package",
+        "publish": "npx vsce publish"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "html",
+                "path": "./snippets/html-snippets.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/javascript-snippets.json"
+            },
+            {
+                "language": "typescript",
+                "path": "./snippets/typescript-snippets.json"
+            }
+        ]
+    }
 }

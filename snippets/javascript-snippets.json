@@ -1,6 +1,6 @@
 {
 	"JavaScript Starting Point": {
-		"prefix": "hf-js",
+		"prefix": "hf-start",
 		"body": [
 			"/* ESLint no-undef-rule: define globals to prevent ESLint errors */",
             "/* global WinJS HybridForms Promise HFFormdefinition $ */",
@@ -22,7 +22,7 @@
 		"description": "Custom Javascript starting point"
     },
     "JavaScript derived Custom Control": {
-        "prefix": "hf-derive",
+        "prefix": "hf-customcontrol",
 		"body": [
 			"${1:DerivedCustomControl}: WinJS.Class.derive(",
                 "\tHybridForms.API.UIControls.BaseControl,",
@@ -30,34 +30,24 @@
                     "\t\tHybridForms.API.UIControls.BaseControl.call(this, element, options);",
                 "\t},",
                 "\t{",
-                    "\t\t// instance properties",
-                    "\t\t_privateProp1: null,",
-                    "\t\tpublicProp1: null,",
-                    "",
-                    "\t\t// instance methods",
+            "",
                     "\t\t_init: function(element) {",
-                        "\t\t\t// _init Method gets called in BaseControl.",
-                        "\t\t\t// call the BaseControl _init Method with the call-Method",
                         "\t\t\tHybridForms.API.UIControls.BaseControl.prototype._init.call(this, element);",
                     "\t\t},",
-                        "",
-                    "\t\tcreateControl: function() { // will be called by base class",
-                        "\t\t\t// private", 
-                        "\t\t\tconsole.log('createControl');",
-                        "",
-                        "\t\t\t// return a promise here, when all ui relevant work is done!",
+            "",
+                    "\t\tcreateControl: function() {",
                         "\t\t\treturn Promise.resolve();",
-                        "\t\t},",
-                        "",
-                    "\t\tregisterEvents: function() { // will be called by base class",
-                        "\t\t\t// registerEvents here",
+                    "\t\t},",
+            "",
+                    "\t\tregisterEvents: function() {",
                         "\t\t\tconsole.log('registerEvents');",
                     "\t\t},",
-                        "",
+            "",
                     "\t\tdispose: function() {",
                         "\t\t\tif (this.disposed) {",
                             "\t\t\t\treturn;",
                         "\t\t\t}",
+            "",
                         "\t\t\tthis.disposed = true;",
                     "\t\t}",
                 "\t},",
@@ -71,22 +61,30 @@
     "Get and Set values": {
         "prefix": "hf-set",
         "body": [
-            "const ${1:ctrl} = HybridForms.API.FormControls.getCtrl('${2:formcontrol_id}');",
+            "const ${1:ctrl}Id = '${2:formcontrol_id}';",
+            "const ${1:ctrl} = HybridForms.API.FormControls.getCtrl(${1:ctrl}Id);",
             "${1:ctrl}.val(${3});"
         ],
         "description": "Get and set values"
     },
-    "Get value of a Field": {
+    "Get a Control": {
+        "prefix": "hf-ctrl",
+        "body": [
+            "const ${1:ctrl} = HybridForms.API.FormControls.getCtrl(${2:id});"
+        ],
+        "description": "Get a control"
+    },
+    "Get a Field": {
         "prefix": "hf-field",
         "body": [
             "const ${1:field} = HybridForms.API.Fields.getById(${2:id});"
         ],
-        "description": "Get value of a field"
+        "description": "Get a field"
     },
     "Cope with RepeatingUnits": {
         "prefix": "hf-repeating",
         "body": [
-            "let postfix;",
+            "let postfix = '';",
             "if (HybridForms.API.RepeatingUnits.isRepeatingUnit(${1:this.element})) {",
                 "\tpostfix = HybridForms.API.RepeatingUnits.getPostfixFieldId(${1:this.element});",
             "}"

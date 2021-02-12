@@ -1,0 +1,79 @@
+{
+	"TypeScript Starting Point": {
+		"prefix": "hf-start",
+		"body": [
+			"declare var HybridForms: any;",
+            "",
+            "namespace HFFormdefinition.${1:SomeNamespace} {",
+                "\texport function ${2:doSomethingOnChange}(value) {",
+                    "\t\tconsole.log('value: ', value);",
+                    "\t\tconsole.log('ctrl: ', this);",
+                "\t},",
+            "}",
+            "",
+            "WinJS.Utilities.markSupportedForProcessing(HFFormdefinition.${1:SomeNamespace}.${2:doSomethingOnChange});"
+		],
+		"description": "Custom TypeScript starting point"
+    },
+    "TypeScript derived Custom Control": {
+        "prefix": "hf-customcontrol",
+		"body": [
+            "export class ${1:DerivedCustomControl} extends HybridForms.API.UIControls.BaseControl {",
+            "",
+                "\tconstructor(element, options) {",
+                    "\t\tsuper(element, options);",
+                "\t}",
+                "",
+                "\tprotected createControl(): Promise<void> {",
+                    "\t\treturn Promise.resolve();",
+                "\t}",
+                "",
+                "\tprotected registerEvents() {",
+                    "\t\t",
+                "\t}",
+                "",
+                "\tpublic dispose() {",
+                    "\t\tif (this.disposed) {",
+                        "\t\t\treturn;",
+                    "\t\t}",
+                    "",
+                    "\t\tthis.disposed = true;",
+                "\t}",
+            "}"
+		],
+		"description": "TypeScript derived Custom Control"
+    },
+    "Get and Set values": {
+        "prefix": "hf-set",
+        "body": [
+            "const ${1:ctrl}Id = '${2:formcontrol_id}';",
+            "const ${1:ctrl} = HybridForms.API.FormControls.getCtrl(${1:ctrl}Id);",
+            "${1:ctrl}.val(${3});"
+        ],
+        "description": "Get and set values"
+    },
+    "Get a Control": {
+        "prefix": "hf-ctrl",
+        "body": [
+            "const ${1:ctrl} = HybridForms.API.FormControls.getCtrl(${2:id});"
+        ],
+        "description": "Get a control"
+    },
+    "Get a Field": {
+        "prefix": "hf-field",
+        "body": [
+            "const ${1:field} = HybridForms.API.Fields.getById(${2:id});"
+        ],
+        "description": "Get a field"
+    },
+    "Cope with RepeatingUnits": {
+        "prefix": "hf-repeating",
+        "body": [
+            "let postfix = '';",
+            "if (HybridForms.API.RepeatingUnits.isRepeatingUnit(${1:this.element})) {",
+                "\tpostfix = HybridForms.API.RepeatingUnits.getPostfixFieldId(${1:this.element});",
+            "}"
+        ],
+        "description": "Get post fix of a repeating unit"
+    }
+}
