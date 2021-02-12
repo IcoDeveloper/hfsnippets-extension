@@ -8,7 +8,7 @@
                 "\texport function ${2:doSomethingOnChange}(value) {",
                     "\t\tconsole.log('value: ', value);",
                     "\t\tconsole.log('ctrl: ', this);",
-                "\t},",
+                "\t}",
             "}",
             "",
             "WinJS.Utilities.markSupportedForProcessing(HFFormdefinition.${1:SomeNamespace}.${2:doSomethingOnChange});"
