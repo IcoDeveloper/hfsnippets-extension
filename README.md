@@ -12,7 +12,7 @@ All snippets starts with "hf-". Type part of a snippet, press enter, and the sni
 
 ![hf-combobox](images/hf-combobox.gif)
 
-### hf-js
+### hf-start
 
 ![hf-js](images/hf-js.gif)
 
