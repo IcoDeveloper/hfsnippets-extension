@@ -2,8 +2,6 @@
 	"TypeScript Starting Point": {
 		"prefix": "hf-start",
 		"body": [
-			"declare var HybridForms: any;",
-            "",
             "namespace HFFormdefinition.${1:SomeNamespace} {",
                 "\texport function ${2:doSomethingOnChange}(value) {",
                     "\t\tconsole.log('value: ', value);",
