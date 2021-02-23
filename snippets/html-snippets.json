@@ -59,7 +59,10 @@
 		"prefix": "hf-checkbox",
 		"body": [
 			"<input id=\"${1:id}\" type=\"checkbox\" value=\"${2:value}\" data-win-control=\"HFWinJSCtrl.CheckBox\"",  
-			"\tdata-win-options=\"{$3}\" />"
+			"\tdata-win-options=\"{",
+            "\t\tlabel: '$3',",
+            "\t\tdefaultValue: ${4:false},",
+            "\t}\" />"
 		],
 		"description": "Creates a Checkbox"
 	},
@@ -179,7 +182,10 @@
 		"prefix": "hf-radiobox",
 		"body": [
 			"<input id=\"${1:id}\" type=\"radio\" name=\"${2:name}\" value=\"${3:value}\" data-win-control=\"HFWinJSCtrl.RadioBox\"",
-			"\tdata-win-options=\"{$4}\" />"
+            "\tdata-win-options=\"{",
+            "\t\tlabel: '$4',",
+            "\t\tdefaultValue: ${5:false},",
+            "\t}\" />"
 		],
 		"description": "Creates a RadioBox input field"
 	},
