@@ -5,7 +5,7 @@
 		"body": [
 			"<div id=\"${1:id}\" data-win-control=\"HFWinJSCtrl.Condition\"",
 			"\tdata-hf-condition='{\"cond\": [",
-                "\t\t{ \"type\": \"$2\", \"id\": \"$3\"$4 }",
+                "\t\t{ \"type\": \"$2\", \"id\": \"$3\", \"val\": \"$4\" }",
 			"\t], \"else\": \"$5\"}'>",
 			"\t$6",
 			"</div>"
@@ -19,7 +19,7 @@
 		"body": [
 			"<li data-hf-title=\"$1\"", 
 			"\tdata-hf-condition='{\"cond\": [",
-				"\t\t{ \"type\": \"$2\", \"id\": \"$3\"$4 }",
+				"\t\t{ \"type\": \"$2\", \"id\": \"$3\", \"val\": \"$4\" }",
 			"\t], \"else\": \"$5\"}'>",
 			"\t<ol>",
 				"\t\t$6",
@@ -35,7 +35,7 @@
 		"body": [
 			"<li data-hf-title=\"${1:Tab Name}\"", 
 			"\tdata-hf-condition='{\"cond\": [",
-				"\t\t { \"type\": \"$2\", \"id\": \"$3\"$4 }",
+				"\t\t { \"type\": \"$2\", \"id\": \"$3\", \"val\": \"$4\" }",
 				"\t], \"else\": \"$5\"}'>",
 				"\t$6",
             "</li>"
@@ -152,7 +152,10 @@
 		"prefix": "hf-numericfield",
 		"body": [
 			"<div id=\"${1:id}\" data-win-control=\"HFWinJSCtrl.NumericField\"", 
-			"\tdata-win-options=\"{$2}\"></div>"
+			"\tdata-win-options=\"{",
+            "\t\tspinners: ${2:false},",
+            "\t\tdisableOpenDialog: ${3:true},$4",
+            "\t}\" ></div>"
 		],
 		"description": "Creates a NumericField input field"
 	},
