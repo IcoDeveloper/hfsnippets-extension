@@ -254,5 +254,27 @@
 			"\tdata-win-options=\"{$2}\"></div>"
 		],
 		"description": "Creates a Time Picker input field"
-	}
+	},
+
+    "TreeView": {
+        "prefix": "hf-treeview",
+        "body": [
+          "<div id=\"${1:id}\" data-win-control=\"HFWinJSCtrl.TreeView\"",
+          "\tdata-win-options=\"{${2}}\"></div>"
+        ],
+        "description": "Creates a TreeView"
+    },
+
+    "Webview": {
+        "scope": "html",
+        "prefix": "hf-webview",
+        "body": [
+          "<div id=\"${1:id}\" data-win-control=\"HFWinJSCtrl.Webview\"",
+          "\tdata-win-options=\"{",
+          "\t\turl: '${2}',",
+          "\t\ttype: '${3:website}',",
+          "\t}\"></div>"
+        ],
+        "description": "Creates a Webview"
+    }
 }
