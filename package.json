@@ -32,6 +32,10 @@
             {
                 "language": "typescript",
                 "path": "./snippets/typescript-snippets.json"
+            },
+            {
+                "language": "scss",
+                "path": "./snippets/scss-snippets.json"
             }
         ]
     }

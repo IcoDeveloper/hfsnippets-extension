@@ -12,7 +12,7 @@ All snippets starts with "hf-". Type part of a snippet, press enter, and the sni
 
 ![hf-combobox](images/hf-combobox.gif)
 
-### hf-start
+### hf-js
 
 ![hf-js](images/hf-js.gif)
 
@@ -47,15 +47,39 @@ hf-signature | Creates a Signature input field
 hf-textfield | Creates a Text input field
 hf-textarea | Creates a textarea
 hf-timepicker | Creates a Time Picker input field
+hf-treeview | Creates a TreeView
+hf-webview | Creates a Webview
 
-### JavaScript/TypeScript Snippets
+### JavaScript Snippets
 
 Snippet | Description
 --------|-------------
-hf-start | Custom Javascript starting point
+hf-js | Custom Javascript starting point
 hf-customcontrol | JavaScript derived Custom Control
 hf-onchange | JavaScript onChange event handler
 hf-set | Get and set values
 hf-ctrl | Get a control
 hf-field | Get a field
 hf-repeating | Get post fix of a repeating unit
+
+### TypeScript Snippets
+
+Snippet | Description
+--------|-------------
+hf-ts | Custom TypeScript starting point
+hf-customcontrol | JavaScript derived Custom Control
+hf-onchange | JavaScript onChange event handler
+hf-set | Get and set values
+hf-ctrl | Get a control
+hf-field | Get a field
+hf-repeating | Get post fix of a repeating unit
+hf-user | Get current display name of user and write it to control by given id
+hf-signer | Add field values to Signature by given comma serperated ids
+
+### Extended Snippets
+
+These snippets must be executed in all specified file types in order to obtain all the necessary code parts and the desired functionality!
+
+Snippet | File Types | Description
+--------|------------|-------------
+hf-repeatinginput | HTML, SCSS, TS | Add RepeatingInput to project

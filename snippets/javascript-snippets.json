@@ -1,6 +1,6 @@
 {
 	"JavaScript Starting Point": {
-		"prefix": "hf-start",
+		"prefix": "hf-js",
 		"body": [
 			"/* ESLint no-undef-rule: define globals to prevent ESLint errors */",
             "/* global WinJS HybridForms Promise HFFormdefinition $ */",
