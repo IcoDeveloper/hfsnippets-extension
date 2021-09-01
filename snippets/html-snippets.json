@@ -82,7 +82,10 @@
 		"prefix": "hf-datepicker",
 		"body": [
 			"<div id=\"${1:id}\" data-win-control=\"HFWinJSCtrl.DatePicker\"",
-			"\tdata-win-options=\"{$2}\"></div>"
+			"\tdata-win-options=\"{",
+            "\t\tdisplayValueFormat: 'dd.MM.yyyy',",
+            "\t\tparseFormats: ['ddMMyyyy', 'dd/MM/yyyy', 'dd-MM-yyyy', 'd.M.yy', 'ddMMyy', 'd/M/yy', 'd-M-yy']",
+            "\t}\"></div>"
 		],
 		"description": "Creates a Datepicker input field"
 	},
