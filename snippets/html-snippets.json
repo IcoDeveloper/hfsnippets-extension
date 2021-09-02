@@ -242,7 +242,7 @@
 		"scope": "html",
 		"prefix": "hf-textarea",
 		"body": [
-			"<textarea id=\"${1:id}\" data-win-control=\"HFWinJSCtrl.TextField\"",
+			"<textarea id=\"${1:id}\" rows=\"1\" data-win-control=\"HFWinJSCtrl.TextField\"",
             "\tstyle=\"min-height:${2:110px}; height:auto\"",
 			"\tdata-win-options=\"{$3}\"></textarea>"
 		],
