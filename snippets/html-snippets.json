@@ -54,6 +54,21 @@
 		"description": "Creates an empty block container"
 	},
 
+    "ButtonControl": {
+        "scope": "html",
+        "prefix": "hf-buttoncontrol",
+        "body": [
+            "<div id=\"${1:id}\" data-win-control=\"HFWinJSCtrl.ButtonControl\" ",
+            "\tdata-win-options=\"{",
+            "\t\tbuttonType: '${2:large}',",
+            "\t\tbuttonLabel: '${3:label}',",
+            "\t\tbuttonHeading: '${4:heading}',",
+            "\t\tcallback: ${5:callback}",
+            "\t}\"></div>"
+        ],
+        "description": "Creates a ButtonControl"
+    },
+
 	"CheckBox": {
 		"scope": "html",
 		"prefix": "hf-checkbox",

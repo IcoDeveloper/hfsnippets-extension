@@ -28,6 +28,7 @@ hf-block | Creates an empty block container
 hf-condition | Creates a block, area, tab, condition definition
 hf-pagecondition | Creates a Page condition definition
 hf-templatecondition | Creates a Template condition definition
+hf-buttoncontrol | Creates a ButtonControl
 hf-checkbox | Creates a Checkbox
 hf-combobox | Creates a Combobox input field
 hf-datepicker | Creates a Datepicker input field
