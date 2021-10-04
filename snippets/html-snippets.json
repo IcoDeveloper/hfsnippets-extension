@@ -299,9 +299,9 @@
     "Initializr": {
         "prefix": "hf-initializr",
         "body": [
-            "<div id=\"highlight_cell_init\" data-win-control=\"HFFormdefinition.SparkasseBegehungHelpers.Initializr\"",
+            "<div id=\"${1:id}\" class=\"hf-hide\" data-win-control=\"HFFormdefinition.${2:namespace}.Initializr\"",
             "    data-win-options=\"{",
-            "        callback: HFFormdefinition.SparkasseBegehungHelpers.highlightCell",
+            "        callback: HFFormdefinition.${2:namespace}.${3:function}",
             "    }\"></div>"
         ],
         "description": "Add Initializr block to html"
