@@ -296,6 +296,17 @@
         "description": "Creates a Webview"
     },
 
+    "Initializr": {
+        "prefix": "hf-initializr",
+        "body": [
+            "<div id=\"highlight_cell_init\" data-win-control=\"HFFormdefinition.SparkasseBegehungHelpers.Initializr\"",
+            "    data-win-options=\"{",
+            "        callback: HFFormdefinition.SparkasseBegehungHelpers.highlightCell",
+            "    }\"></div>"
+        ],
+        "description": "Add Initializr block to html"
+    },
+
     "RepeatingInput": {
         "prefix": "hf-repeatinginput",
         "body": [

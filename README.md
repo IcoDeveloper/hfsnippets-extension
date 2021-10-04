@@ -76,7 +76,6 @@ hf-field | Get a field
 hf-repeating | Get post fix of a repeating unit
 hf-user | Get current display name of user and write it to control by given id
 hf-signer | Add field values to Signature by given comma serperated ids
-hf-initializr | Add Initializr class to namespace
 
 ### Extended Snippets
 
@@ -85,3 +84,4 @@ These snippets must be executed in all specified file types in order to obtain a
 Snippet | File Types | Description
 --------|------------|-------------
 hf-repeatinginput | HTML, SCSS, TS | Add RepeatingInput to project
+hf-initializr | HTML, TS | Add Initializr block to file
