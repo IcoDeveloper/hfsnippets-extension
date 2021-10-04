@@ -74,6 +74,43 @@
         ],
         "description": "Get post fix of a repeating unit"
     },
+
+    "Initializr class": {
+        "prefix": "hf-initializr",
+        "body": [
+            "export class Initializr extends HybridForms.API.UIControls.BaseControl {",
+            "    private onRendered: () => void;",
+            "    public callback: () => void;",
+            "",
+            "    constructor(element, options) {",
+            "        super(element, options);",
+            "",
+            "        if (typeof this.callback === 'function') {",
+            "            this.onRendered = () => {",
+            "                this.callback.call(this);",
+            "            };",
+            "            HybridForms.API.Page.addEventListener('rendered', this.onRendered);",
+            "            HybridForms.API.Page.addEventListener('viewrendered', this.onRendered);",
+            "        }",
+            "    }",
+            "",
+            "    public dispose() {",
+            "        if (this.disposed) {",
+            "            return;",
+            "        }",
+            "",
+            "        if (this.onRendered) {",
+            "            HybridForms.API.Page.removeEventListener('rendered', this.onRendered);",
+            "            HybridForms.API.Page.addEventListener('viewrendered', this.onRendered);",
+            "        }",
+            "",
+            "        this.disposed = true;",
+            "    }",
+            "}"
+        ],
+        "description": "Add Initializr class to namespace"
+    },
+    
     "Get current User": {
         "prefix": "hf-user",
         "body": [

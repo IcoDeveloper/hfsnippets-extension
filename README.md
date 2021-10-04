@@ -76,6 +76,7 @@ hf-field | Get a field
 hf-repeating | Get post fix of a repeating unit
 hf-user | Get current display name of user and write it to control by given id
 hf-signer | Add field values to Signature by given comma serperated ids
+hf-initializr | Add Initializr class to namespace
 
 ### Extended Snippets
 
