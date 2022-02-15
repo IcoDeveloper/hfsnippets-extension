@@ -33,6 +33,7 @@ hf-checkbox | Creates a Checkbox
 hf-combobox | Creates a Combobox input field
 hf-datepicker | Creates a Datepicker input field
 hf-drawingcontrol | Creates a Drawingcontrol input field
+hf-dropdownlist | Creates a DropDownList input field
 hf-htmlcontainer | Creates a HtmlContainer input element
 hf-inkcontrol | Creates a Inkcontrol input field
 hf-label | Creates a Label
@@ -76,6 +77,7 @@ hf-field | Get a field
 hf-repeating | Get post fix of a repeating unit
 hf-user | Get current display name of user and write it to control by given id
 hf-signer | Add field values to Signature by given comma serperated ids
+hf-counter | Add Counter request template
 
 ### Extended Snippets
 
