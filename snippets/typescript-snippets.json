@@ -3,10 +3,10 @@
 		"prefix": "hf-ts",
 		"body": [
             "namespace HFFormdefinition.${1:SomeNamespace} {",
-                "\texport function ${2:doSomethingOnChange}(value) {",
-                    "\t\tconsole.log('value: ', value);",
-                    "\t\tconsole.log('ctrl: ', this);",
-                "\t}",
+            "    export function ${2:doSomethingOnChange}(value) {",
+            "        console.log('value: ', value);",
+            "        console.log('ctrl: ', this);",
+            "    }",
             "}",
             "",
             "WinJS.Utilities.markSupportedForProcessing(HFFormdefinition.${1:SomeNamespace}.${2:doSomethingOnChange});"
@@ -18,25 +18,25 @@
 		"body": [
             "export class ${1:DerivedCustomControl} extends HybridForms.API.UIControls.BaseControl {",
             "",
-                "\tconstructor(element, options) {",
-                    "\t\tsuper(element, options);",
-                "\t}",
-                "",
-                "\tprotected createControl(): Promise<void> {",
-                    "\t\treturn Promise.resolve();",
-                "\t}",
-                "",
-                "\tprotected registerEvents() {",
-                    "\t\t",
-                "\t}",
-                "",
-                "\tpublic dispose() {",
-                    "\t\tif (this.disposed) {",
-                        "\t\t\treturn;",
-                    "\t\t}",
-                    "",
-                    "\t\tthis.disposed = true;",
-                "\t}",
+            "    constructor(element, options) {",
+            "        super(element, options);",
+            "    }",
+            "",
+            "    protected createControl(): Promise<void> {",
+            "        return Promise.resolve();",
+            "    }",
+            "",
+            "    protected registerEvents() {",
+            "        ",
+            "    }",
+            "",
+            "    public dispose() {",
+            "        if (this.disposed) {",
+            "            return;",
+            "        }",
+            "",
+            "        this.disposed = true;",
+            "    }",
             "}"
 		],
 		"description": "TypeScript derived Custom Control"
@@ -69,7 +69,7 @@
         "body": [
             "let postfix = '';",
             "if (HybridForms.API.RepeatingUnits.isRepeatingUnit(${1:this.element})) {",
-                "\tpostfix = HybridForms.API.RepeatingUnits.getPostfixFieldId(${1:this.element});",
+            "    postfix = HybridForms.API.RepeatingUnits.getPostfixFieldId(${1:this.element});",
             "}"
         ],
         "description": "Get post fix of a repeating unit"
@@ -360,5 +360,33 @@
             "}"
         ],
         "description": "Add custom code for RepeatingInput"
+    },
+
+    "Counter": {
+        "prefix": "hf-counter",
+        "body": [
+            "return HybridForms.API.XHR.request({",
+            "    type: 'POST',",
+            "    url: HybridForms.API.Activation.getUrl('~/counter/$1'),",
+            "    headers: { 'Content-Type': 'application/json' },",
+            "    data: JSON.stringify({",
+            "        'options': {",
+            "            'opt1': $2",
+            "        },",
+            "    }),",
+            "}).then((response) => {",
+            "    try {",
+            "        let counter = JSON.parse(response.responseText);",
+            "        $3",
+            "",
+            "    } catch {",
+            "        return Promise.reject();",
+            "    }",
+            "",
+            "}).catch(() => {",
+            "    HybridForms.API.Messages.error($4);",
+            "});"
+        ],
+        "description": "Add Counter request template"
     }
 }
