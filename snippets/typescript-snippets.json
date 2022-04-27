@@ -9,7 +9,13 @@
             "    }",
             "}",
             "",
-            "WinJS.Utilities.markSupportedForProcessing(HFFormdefinition.${1:SomeNamespace}.${2:doSomethingOnChange});"
+            "for (let index in HFFormdefinition.${1:SomeNamespace}) {",
+            "    const exportedFunction = HFFormdefinition.${1:SomeNamespace}[index];",
+            "    if (typeof exportedFunction !== 'function') {",
+            "        continue;",
+            "    }",
+            "    WinJS.Utilities.markSupportedForProcessing(exportedFunction);",
+            "}"
 		],
 		"description": "Custom TypeScript starting point"
     },
