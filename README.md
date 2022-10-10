@@ -47,6 +47,7 @@ hf-reversegeolocatorbutton | Creates a Reverse Geolocator Button
 hf-selectbox | Creates a Selectbox
 hf-signature | Creates a Signature input field
 hf-textfield | Creates a Text input field
+hf-textfield-tel | Creates a Tel number input field
 hf-textarea | Creates a textarea
 hf-timepicker | Creates a Time Picker input field
 hf-treeview | Creates a TreeView
