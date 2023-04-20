@@ -35,7 +35,7 @@
             },
             {
                 "language": "html",
-                "path": "./snippets/layout/html-snippets.json"
+                "path": "./snippets/layout/extended-snippets.json"
             },
             {
                 "language": "javascript",
