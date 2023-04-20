@@ -11,7 +11,7 @@
             "            \"id\": \"$3\",",
             "            \"val\": \"$4\"",
 			"        }],",
-            "        \"else\": \"$5\"",
+            "        \"else\": \"${5:invisible}\"",
             "    }'>",
 			"    $6",
 			"</div>"
@@ -30,7 +30,7 @@
             "            \"id\": \"$3\",",
             "            \"val\": \"$4\"",
 			"        }],",
-            "        \"else\": \"$5\"",
+            "        \"else\": \"${5:invisible}\"",
             "    }'>",
 			"    <ol>",
             "        $6",
@@ -51,13 +51,29 @@
             "            \"id\": \"$3\",",
             "            \"val\": \"$4\"",
             "        }],",
-            "        \"else\": \"$5\"",
+            "        \"else\": \"${5:invisible}\"",
             "    }'>",
             "    $6",
             "</li>"
 		],
 		"description": "Creates a Template condition definition"
 	},
+
+    "Condition Attribute": {
+        "scope": "html",
+        "prefix": "hf-condition-attr",
+        "body": [
+            "data-hf-condition='{",
+            "    \"cond\": [{",
+            "        \"type\": \"$1\",",
+            "        \"id\": \"$2\",",
+            "        \"val\": \"$3\"",
+            "    }],",
+            "    \"else\": \"${4:invisible}\"",
+            "}'"
+        ],
+        "description": "Creates a data-hf-condition attribute"
+    },
 
 	"Template": {
 		"scope": "html",
