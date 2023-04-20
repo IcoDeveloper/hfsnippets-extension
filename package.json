@@ -23,19 +23,31 @@
         "snippets": [
             {
                 "language": "html",
-                "path": "./snippets/html-snippets.json"
+                "path": "./snippets/layout/attribute-snippets.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/layout/block-snippets.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/layout/formcontrol-snippets.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/layout/html-snippets.json"
             },
             {
                 "language": "javascript",
-                "path": "./snippets/javascript-snippets.json"
+                "path": "./snippets/script/javascript-snippets.json"
             },
             {
                 "language": "typescript",
-                "path": "./snippets/typescript-snippets.json"
+                "path": "./snippets/script/typescript-snippets.json"
             },
             {
                 "language": "scss",
-                "path": "./snippets/scss-snippets.json"
+                "path": "./snippets/style/scss-snippets.json"
             }
         ]
     }

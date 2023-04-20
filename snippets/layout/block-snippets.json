@@ -1,0 +1,73 @@
+{
+	"Template": {
+		"scope": "html",
+		"prefix": "hf-block",
+		"body": [
+			"<div id=\"${1:id}\"",
+            "    data-win-control=\"WinJS.Binding.Template\">",     
+            "    $2",
+			"</div>"
+		],
+		"description": "Creates an empty block container"
+	},
+
+    "Condition": {
+		"scope": "html",
+		"prefix": "hf-condition",
+		"body": [
+			"<div id=\"${1:id}\"",
+            "    data-win-control=\"HFWinJSCtrl.Condition\"",
+			"    data-hf-condition='{",
+            "        \"cond\": [{",
+            "            \"type\": \"$2\",",
+            "            \"id\": \"$3\",",
+            "            \"val\": \"$4\"",
+			"        }],",
+            "        \"else\": \"${5:invisible}\"",
+            "    }'>",
+			"    $6",
+			"</div>"
+		],
+		"description": "Creates a block, area, tab, condition definition"
+	},
+
+	"Page Condition": {
+		"scope": "html",
+		"prefix": "hf-pagecondition",
+		"body": [
+			"<li data-hf-title=\"$1\"", 
+			"    data-hf-condition='{",
+            "        \"cond\": [{",
+            "            \"type\": \"$2\",",
+            "            \"id\": \"$3\",",
+            "            \"val\": \"$4\"",
+			"        }],",
+            "        \"else\": \"${5:invisible}\"",
+            "    }'>",
+			"    <ol>",
+            "        $6",
+			"    </ol>",
+			"</li>"
+		],
+		"description": "Creates a Page condition definition"
+	},
+
+	"Template Condition": {
+		"scope": "html",
+		"prefix": "hf-templatecondition",
+		"body": [
+			"<li data-hf-title=\"${1:Tab Name}\"", 
+            "    data-hf-condition='{",
+            "        \"cond\": [{",
+            "            \"type\": \"$2\",",
+            "            \"id\": \"$3\",",
+            "            \"val\": \"$4\"",
+            "        }],",
+            "        \"else\": \"${5:invisible}\"",
+            "    }'>",
+            "    $6",
+            "</li>"
+		],
+		"description": "Creates a Template condition definition"
+	}
+}

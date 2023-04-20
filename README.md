@@ -22,13 +22,19 @@ You don't need to type any dashes: "hfcustomcontrol" -> "hf-customcontrol" snipp
 
 ### HTML Snippets
 
+#### **Block Snippets**
+
 Snippet  | Description
 ---------|-------------
 hf-block | Creates an empty block container
 hf-condition | Creates a block, area, tab, condition definition
 hf-pagecondition | Creates a Page condition definition
 hf-templatecondition | Creates a Template condition definition
-hf-condition-attr | Creates a data-hf-condition attribute
+
+#### **FormControl Snippets**
+
+Snippet  | Description
+---------|-------------
 hf-buttoncontrol | Creates a ButtonControl
 hf-checkbox | Creates a Checkbox
 hf-combobox | Creates a Combobox input field
@@ -54,17 +60,11 @@ hf-timepicker | Creates a Time Picker input field
 hf-treeview | Creates a TreeView
 hf-webview | Creates a Webview
 
-### JavaScript Snippets
+#### **Attribute Snippets**
 
-Snippet | Description
---------|-------------
-hf-js | Custom Javascript starting point
-hf-customcontrol | JavaScript derived Custom Control
-hf-onchange | JavaScript onChange event handler
-hf-set | Get and set values
-hf-ctrl | Get a control
-hf-field | Get a field
-hf-repeating | Get post fix of a repeating unit
+Snippet  | Description
+---------|-------------
+hf-condition-attr | Creates a data-hf-condition attribute
 
 ### TypeScript Snippets
 
@@ -80,6 +80,18 @@ hf-repeating | Get post fix of a repeating unit
 hf-user | Get current display name of user and write it to control by given id
 hf-signer | Add field values to Signature by given comma serperated ids
 hf-counter | Add Counter request template
+
+### JavaScript Snippets
+
+Snippet | Description
+--------|-------------
+hf-js | Custom Javascript starting point
+hf-customcontrol | JavaScript derived Custom Control
+hf-onchange | JavaScript onChange event handler
+hf-set | Get and set values
+hf-ctrl | Get a control
+hf-field | Get a field
+hf-repeating | Get post fix of a repeating unit
 
 ### Extended Snippets
 
