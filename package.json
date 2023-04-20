@@ -2,7 +2,7 @@
     "name": "hfsnippets",
     "displayName": "HybridForms Snippets",
     "description": "Integrates HybridForms snippets into VS Code",
-    "version": "3.4.2",
+    "version": "4.0.0",
     "publisher": "icomedias",
     "icon": "HF_Extension_icon.png",
     "repository": {
