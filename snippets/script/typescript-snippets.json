@@ -1,7 +1,7 @@
 {
-	"TypeScript Starting Point": {
-		"prefix": "hf-ts",
-		"body": [
+    "TypeScript Starting Point": {
+        "prefix": "hf-ts",
+        "body": [
             "namespace HFFormdefinition.${1:SomeNamespace} {",
             "    export function ${2:doSomethingOnChange}(value) {",
             "        console.log('value: ', value);",
@@ -16,12 +16,12 @@
             "    }",
             "    WinJS.Utilities.markSupportedForProcessing(exportedFunction);",
             "}"
-		],
-		"description": "Custom TypeScript starting point"
+        ],
+        "description": "Custom TypeScript starting point"
     },
     "TypeScript derived Custom Control": {
         "prefix": "hf-customcontrol",
-		"body": [
+        "body": [
             "export class ${1:DerivedCustomControl} extends HybridForms.API.UIControls.BaseControl {",
             "",
             "    constructor(element, options) {",
@@ -44,8 +44,8 @@
             "        this.disposed = true;",
             "    }",
             "}"
-		],
-		"description": "TypeScript derived Custom Control"
+        ],
+        "description": "TypeScript derived Custom Control"
     },
     "Get and Set values": {
         "prefix": "hf-set",
@@ -80,7 +80,6 @@
         ],
         "description": "Get post fix of a repeating unit"
     },
-    
     "Get current User": {
         "prefix": "hf-user",
         "body": [
@@ -119,7 +118,6 @@
         ],
         "description": "Get current display name of user and write it to control by given id"
     },
-
     "Add field values to Signature": {
         "prefix": "hf-signer",
         "body": [
@@ -156,7 +154,6 @@
         ],
         "description": "Add field values to Signature by given comma serperated ids"
     },
-
     "Initializr": {
         "prefix": "hf-initializr",
         "body": [
@@ -192,7 +189,6 @@
         ],
         "description": "Add Initializr class to namespace"
     },
-
     "RepeatingInput": {
         "prefix": "hf-repeatinginput",
         "body": [
@@ -204,9 +200,9 @@
             "",
             "    private clickEvent(event) {",
             "        let targetId = event.currentTarget.id;",
-            "        let $block = $(`#${targetId}`).closest('.repeating-input-container');",
+            "        let \\$block = \\$(`#\\${targetId}`).closest('.repeating-input-container');",
             "",
-            "        $('.repeating-input.hf-hide', $block).first().removeClass('hf-hide');",
+            "        \\$('.repeating-input.hf-hide', \\$block).first().removeClass('hf-hide');",
             "    }",
             "",
             "    private getElementId(element: HTMLElement): string {",
@@ -216,13 +212,13 @@
             "        return element.id;",
             "    }",
             "",
-            "    private showRepeatingInputs($ct: JQuery<HTMLElement> | HTMLElement) {",
-            "        $('.repeating-input:not(.init)', $ct).each((idx, element) => {",
-            "            let $element = $(element);",
-            "            let $input = $('.hf-formcontrol', $element);",
+            "    private showRepeatingInputs(\\$ct: JQuery<HTMLElement> | HTMLElement) {",
+            "        \\$('.repeating-input:not(.init)', \\$ct).each((idx, element) => {",
+            "            let \\$element = \\$(element);",
+            "            let \\$input = \\$('.hf-formcontrol', \\$element);",
             "            let filled = false;",
             "",
-            "            $input.each((index, el) => {",
+            "            \\$input.each((index, el) => {",
             "                const field = HybridForms.API.Fields.getById(this.getElementId(el));",
             "                const value = field?.value;",
             "                if (value) {",
@@ -231,29 +227,29 @@
             "            });",
             "",
             "            if (filled) {",
-            "                $element.removeClass('hf-hide');",
+            "                \\$element.removeClass('hf-hide');",
             "            } else {",
-            "                $element.addClass('hf-hide');",
+            "                \\$element.addClass('hf-hide');",
             "            }",
             "        });",
             "    }",
             "",
             "    protected createView() {",
-            "        const $ct = this.$element.closest('.repeating-input-container');",
-            "        this.showRepeatingInputs($ct);",
+            "        const \\$ct = this.\\$element.closest('.repeating-input-container');",
+            "        this.showRepeatingInputs(\\$ct);",
             "    }",
             "",
             "    protected createControl(): Promise<void> {",
             "        const currentStatus = HybridForms.API.Form.getStatus();",
             "        if (currentStatus > 1) {",
-            "            this.$element.parents('.add-input-wrapper').addClass('hf-hide');",
+            "            this.\\$element.parents('.add-input-wrapper').addClass('hf-hide');",
             "        }",
             "",
-            "        const $ct = this.$element.closest('.repeating-input-container');",
+            "        const \\$ct = this.\\$element.closest('.repeating-input-container');",
             "",
-            "        this.showRepeatingInputs($ct);",
+            "        this.showRepeatingInputs(\\$ct);",
             "",
-            "        this.$element.on('click', (ev) => {",
+            "        this.\\$element.on('click', (ev) => {",
             "            ev.stopImmediatePropagation();",
             "            ev.preventDefault();",
             "            this.clickEvent(ev);",
@@ -267,7 +263,7 @@
             "            return;",
             "        }",
             "",
-            "        this.$element.off('click');",
+            "        this.\\$element.off('click');",
             "",
             "        this.disposed = true;",
             "    }",
@@ -281,32 +277,32 @@
             "",
             "    private clickEvent(event) {",
             "        let targetId = event.currentTarget.id;",
-            "        let $block = $(`#${targetId}`).closest('.repeating-input-container');",
-            "        let $inputBlock = $('#' + event.currentTarget.id, $block).closest('.repeating-input');",
-            "        let $input = $('.hf-formcontrol', $inputBlock);",
+            "        let \\$block = \\$(`#\\${targetId}`).closest('.repeating-input-container');",
+            "        let \\$inputBlock = \\$('#' + event.currentTarget.id, \\$block).closest('.repeating-input');",
+            "        let \\$input = \\$('.hf-formcontrol', \\$inputBlock);",
             "",
-            "        $input.each((idx, element) => {",
+            "        \\$input.each((idx, element) => {",
             "            HybridForms.API.FormControls.getCtrl(element.id).val(null);",
             "        });",
             "",
-            "        const $ruInputs = $('.repeating-input:not(.hf-hide)', $block);",
-            "        $ruInputs.each((idx, context) => {",
-            "            const $context = $(context);",
+            "        const \\$ruInputs = \\$('.repeating-input:not(.hf-hide)', \\$block);",
+            "        \\$ruInputs.each((idx, context) => {",
+            "            const \\$context = \\$(context);",
             "            const idPostfix = idx + 1;",
             "            let emptyRow = true;",
             "",
-            "            const $formControls = $('.hf-formcontrol', $context);",
-            "            $formControls.each((index, element) => {",
-            "                if ($(element).hasClass('filled')) {",
+            "            const \\$formControls = \\$('.hf-formcontrol', \\$context);",
+            "            \\$formControls.each((index, element) => {",
+            "                if (\\$(element).hasClass('filled')) {",
             "                    emptyRow = false;",
             "                }",
             "            });",
             "",
-            "            if (emptyRow && idPostfix < $ruInputs.length) {",
-            "                $formControls.each((index, element) => {",
+            "            if (emptyRow && idPostfix < \\$ruInputs.length) {",
+            "                \\$formControls.each((index, element) => {",
             "                    const id = element.id;",
             "                    const ctrl = HybridForms.API.FormControls.getCtrl(id);",
-            "                    const nextId = id.replace(/input_(?:\\d*)/, `input_${idPostfix + 1}`);",
+            "                    const nextId = id.replace(/input_(?:\\d*)/, `input_\\${idPostfix + 1}`);",
             "                    let nextCtrl = HybridForms.API.FormControls.getCtrl(nextId);",
             "",
             "                    let nextVal = nextCtrl.val();",
@@ -321,17 +317,17 @@
             "            }",
             "        });",
             "",
-            "        $('.repeating-input:not(.hf-hide):not(.init)', $block).last().addClass('hf-hide');",
+            "        \\$('.repeating-input:not(.hf-hide):not(.init)', \\$block).last().addClass('hf-hide');",
             "    }",
             "",
             "    protected createControl(): Promise<void> {",
             "        const currentStatus = HybridForms.API.Form.getStatus();",
             "",
             "        if (currentStatus > 1) {",
-            "            this.$element.addClass('hf-hide');",
+            "            this.\\$element.addClass('hf-hide');",
             "        }",
             "",
-            "        this.$element.on('click', (ev) => {",
+            "        this.\\$element.on('click', (ev) => {",
             "            ev.stopImmediatePropagation();",
             "            ev.preventDefault();",
             "            this.clickEvent(ev);",
@@ -345,7 +341,7 @@
             "            return;",
             "        }",
             "",
-            "        this.$element.off('click');",
+            "        this.\\$element.off('click');",
             "",
             "        this.disposed = true;",
             "    }",
@@ -353,7 +349,6 @@
         ],
         "description": "Add custom code for RepeatingInput"
     },
-
     "Counter": {
         "prefix": "hf-counter",
         "body": [
