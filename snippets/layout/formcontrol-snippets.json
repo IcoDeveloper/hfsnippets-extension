@@ -272,7 +272,6 @@
             "    type=\"${2:text}\"",
             "    data-win-control=\"HFWinJSCtrl.TextField\"",
             "    data-win-options=\"{",
-            "    data-win-options=\"{",
             "        label: '$3',",
             "        tooltip: '',",
             "    }\">"
