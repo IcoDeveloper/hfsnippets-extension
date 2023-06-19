@@ -41,7 +41,7 @@
             "            return;",
             "        }",
             "",
-            "        super.dispose()",
+            "        super.dispose();",
             "    }",
             "}"
         ],
