@@ -241,7 +241,6 @@
             "<select id=\"${1:id}\"",
             "    data-win-control=\"HFWinJSCtrl.SelectBox\"",
             "    data-win-options=\"{",
-            "    data-win-options=\"{",
             "        label: '$2',",
             "        tooltip: '',",
             "    }\">",
@@ -256,7 +255,6 @@
         "body": [
             "<div id=\"${1:id}\"",
             "    data-win-control=\"HFWinJSCtrl.Signature\"",
-            "    data-win-options=\"{",
             "    data-win-options=\"{",
             "        label: '$2',",
             "        tooltip: '',",
