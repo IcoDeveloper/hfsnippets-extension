@@ -47,6 +47,10 @@
             {
                 "language": "scss",
                 "path": "./snippets/style/scss-snippets.json"
+            },
+            {
+                "language": "json",
+                "path": "./snippets/stages/stages-snippets.json"
             }
         ]
     }

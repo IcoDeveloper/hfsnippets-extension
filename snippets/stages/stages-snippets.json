@@ -1,0 +1,86 @@
+{
+    "ConditionWorkflow": {
+        "prefix": "hf-condition-workflow",
+        "body": [
+            "\"wf_${1:condition}\": {",
+            "    \"type\": \"condition\",",
+            "    \"condition\": \"$2\"",
+            "}"
+        ],
+        "description": "Creates a condition workflow"
+    },
+    "CopyPDFWorkflow": {
+        "prefix": "hf-copypdf-workflow",
+        "body": [
+            "\"wf_${1:copypdf}\": {",
+            "    \"type\": \"copypdf\",",
+            "    \"target\": \"$2\"",
+            "}"
+        ],
+        "description": "Creates a copy pdf workflow"
+    },
+    "EmailWorkflow": {
+        "prefix": "hf-email-workflow",
+        "body": [
+            "\"wf_${1:email}\": {",
+            "    \"type\": \"email\",",
+            "    \"to\": \"$2\",",
+            "    \"subject\": \"$3\",",
+            "    \"templateFile\": \"${4:mailtemplate.txt}\",",
+            "    \"attachPDF\": \"${5:true}\"",
+            "}"
+        ],
+        "description": "Creates an email workflow"
+    },
+    "SetOwnerWorkflow": {
+        "prefix": "hf-setowner-workflow",
+        "body": [
+            "\"wf_${1:setowner}\": {",
+            "    \"type\": \"setowner\",",
+            "    \"owner\": \"$2\"",
+            "}"
+        ],
+        "description": "Creates a set owner workflow"
+    },
+    "SetStatusWorkflow": {
+        "prefix": "hf-setstatus-workflow",
+        "body": [
+            "\"wf_${1:setstatus}\": {",
+            "    \"type\": \"setstatus\",",
+            "    \"status\": \"$2\"",
+            "}"
+        ],
+        "description": "Creates a set status workflow"
+    },
+    "SetGroupWorkflow": {
+        "prefix": "hf-setgroup-workflow",
+        "body": [
+            "\"wf_${1:setgroup}\": {",
+            "    \"type\": \"setgroup\",",
+            "    \"group\": \"$2\"",
+            "}"
+        ],
+        "description": "Creates a set group workflow"
+    },
+    "SetFieldWorkflow": {
+        "prefix": "hf-setfield-workflow",
+        "body": [
+            "\"wf_${1:setfield}\": {",
+            "    \"type\": \"setfield\",",
+            "    \"field\": \"$2\",",
+            "    \"value\": \"$3\"",
+            "}"
+        ],
+        "description": "Creates a set field workflow"
+    },
+    "StageChangeWorkflow": {
+        "prefix": "hf-stagechange-workflow",
+        "body": [
+            "\"wf_${1:stagechange}\": {",
+            "    \"type\": \"stagechange\",",
+            "    \"stage\": \"$2\"",
+            "}"
+        ],
+        "description": "Creates a stage change workflow"
+    }
+}
