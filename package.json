@@ -49,7 +49,7 @@
                 "path": "./snippets/style/scss-snippets.json"
             },
             {
-                "language": "json",
+                "language": "jsonc",
                 "path": "./snippets/stages/stages-snippets.json"
             }
         ]
