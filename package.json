@@ -13,7 +13,7 @@
         "vscode": "^1.28.0"
     },
     "scripts": {
-        "postversion": "git push origin HEAD:master && git push origin HEAD:master --tags"
+        "postversion": "git push && git push --tags"
     },
     "categories": [
         "Snippets"
