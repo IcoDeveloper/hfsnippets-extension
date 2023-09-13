@@ -9,6 +9,8 @@
             "        buttonType: '${2:large}',",
             "        buttonLabel: '${3:label}',",
             "        buttonHeading: '${4:heading}',",
+            "        audioFeedback: true,",
+            "        callbackFeedback: false,",
             "        callback: ${5:callback},",
             "    }\"></div>"
         ],
