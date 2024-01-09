@@ -180,7 +180,7 @@
             "",
             "        if (this.onRendered) {",
             "            HybridForms.API.Page.removeEventListener('rendered', this.onRendered);",
-            "            HybridForms.API.Page.addEventListener('viewrendered', this.onRendered);",
+            "            HybridForms.API.Page.removeEventListener('viewrendered', this.onRendered);",
             "        }",
             "",
             "        this.disposed = true;",
