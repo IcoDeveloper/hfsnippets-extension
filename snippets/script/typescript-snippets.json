@@ -9,13 +9,14 @@
             "    }",
             "}",
             "",
-            "for (let index in HFFormdefinition.${1:SomeNamespace}) {",
+            "for (const index in HFFormdefinition.${1:SomeNamespace}) {",
             "    const exportedFunction = HFFormdefinition.${1:SomeNamespace}[index];",
             "    if (typeof exportedFunction !== 'function') {",
             "        continue;",
             "    }",
             "    WinJS.Utilities.markSupportedForProcessing(exportedFunction);",
-            "}"
+            "}",
+            ""
         ],
         "description": "Custom TypeScript starting point"
     },
@@ -23,7 +24,6 @@
         "prefix": "hf-customcontrol",
         "body": [
             "export class ${1:DerivedCustomControl} extends HybridForms.API.UIControls.BaseControl {",
-            "",
             "    constructor(element, options) {",
             "        super(element, options);",
             "    }",
@@ -32,9 +32,7 @@
             "        return Promise.resolve();",
             "    }",
             "",
-            "    protected registerEvents() {",
-            "        ",
-            "    }",
+            "    protected registerEvents() {}",
             "",
             "    public dispose() {",
             "        if (this.disposed) {",
@@ -58,16 +56,12 @@
     },
     "Get a Control": {
         "prefix": "hf-ctrl",
-        "body": [
-            "const ${1:ctrl} = HybridForms.API.FormControls.getCtrl(${2:id});"
-        ],
+        "body": ["const ${1:ctrl} = HybridForms.API.FormControls.getCtrl(${2:id});"],
         "description": "Get a control"
     },
     "Get a Field": {
         "prefix": "hf-field",
-        "body": [
-            "const ${1:field} = HybridForms.API.Fields.getById(${2:id});"
-        ],
+        "body": ["const ${1:field} = HybridForms.API.Fields.getById(${2:id});"],
         "description": "Get a field"
     },
     "Cope with RepeatingUnits": {
@@ -122,9 +116,8 @@
         "prefix": "hf-signer",
         "body": [
             "export function getSigner(): string {",
-            "    let name = [];",
+            "    const name = [];",
             "    let currentRU = '';",
-            "    let signerParts;",
             "    let namePart;",
             "",
             "    if (!this.getSignerOptions) {",
@@ -135,7 +128,7 @@
             "        currentRU = HybridForms.API.RepeatingUnits.getPostfixFieldId(this.element);",
             "    }",
             "",
-            "    signerParts = this.getSignerOptions.split(',');",
+            "    const signerParts = this.getSignerOptions.split(',');",
             "    if (signerParts.length) {",
             "        signerParts.forEach(function (signingPart) {",
             "            if (currentRU) {",
@@ -149,7 +142,7 @@
             "        });",
             "    }",
             "",
-            "    return $.trim(name.join(' '));",
+            "    return name.join(' ').trim();",
             "}"
         ],
         "description": "Add field values to Signature by given comma serperated ids"
@@ -199,8 +192,8 @@
             "    }",
             "",
             "    private clickEvent(event) {",
-            "        let targetId = event.currentTarget.id;",
-            "        let \\$block = \\$(`#\\${targetId}`).closest('.repeating-input-container');",
+            "        const targetId = event.currentTarget.id;",
+            "        const \\$block = \\$(`#\\${targetId}`).closest('.repeating-input-container');",
             "",
             "        \\$('.repeating-input.hf-hide', \\$block).first().removeClass('hf-hide');",
             "    }",
@@ -214,8 +207,8 @@
             "",
             "    private showRepeatingInputs(\\$ct: JQuery<HTMLElement> | HTMLElement) {",
             "        \\$('.repeating-input:not(.init)', \\$ct).each((idx, element) => {",
-            "            let \\$element = \\$(element);",
-            "            let \\$input = \\$('.hf-formcontrol', \\$element);",
+            "            const \\$element = \\$(element);",
+            "            const \\$input = \\$('.hf-formcontrol', \\$element);",
             "            let filled = false;",
             "",
             "            \\$input.each((index, el) => {",
@@ -276,10 +269,10 @@
             "    }",
             "",
             "    private clickEvent(event) {",
-            "        let targetId = event.currentTarget.id;",
-            "        let \\$block = \\$(`#\\${targetId}`).closest('.repeating-input-container');",
-            "        let \\$inputBlock = \\$('#' + event.currentTarget.id, \\$block).closest('.repeating-input');",
-            "        let \\$input = \\$('.hf-formcontrol', \\$inputBlock);",
+            "        const targetId = event.currentTarget.id;",
+            "        const \\$block = \\$(`#\\${targetId}`).closest('.repeating-input-container');",
+            "        const \\$inputBlock = \\$('#' + event.currentTarget.id, \\$block).closest('.repeating-input');",
+            "        const \\$input = \\$('.hf-formcontrol', \\$inputBlock);",
             "",
             "        \\$input.each((idx, element) => {",
             "            HybridForms.API.FormControls.getCtrl(element.id).val(null);",

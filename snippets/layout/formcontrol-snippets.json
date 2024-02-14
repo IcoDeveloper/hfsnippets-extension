@@ -9,8 +9,6 @@
             "        buttonType: '${2:large}',",
             "        buttonLabel: '${3:label}',",
             "        buttonHeading: '${4:heading}',",
-            "        audioFeedback: true,",
-            "        callbackFeedback: false,",
             "        callback: ${5:callback},",
             "    }\"></div>"
         ],
@@ -27,6 +25,7 @@
             "    data-win-options=\"{",
             "        label: '$3',",
             "        defaultValue: ${4:false},",
+            "        style: '${5:backgroundHighlight}',",
             "    }\">"
         ],
         "description": "Creates a Checkbox"
@@ -40,7 +39,9 @@
             "    data-win-options=\"{",
             "        label: '$2',",
             "        tooltip: '',",
-            "        ${3:dataSource: [],}",
+            "        required: ${3:false},",
+            "        disabled: ${4:false},",
+            "        ${5:dataSource: [],}",
             "        dataTextField: 'text',",
             "        dataValueField: 'value',",
             "    }\"></div>"
@@ -56,7 +57,9 @@
             "    data-win-options=\"{",
             "        label: '$2',",
             "        tooltip: '',",
-            "        ${3:dataSource: [],}",
+            "        required: ${3:false},",
+            "        disabled: ${4:false},",
+            "        ${5:dataSource: [],}",
             "        dataTextField: 'text',",
             "        dataValueField: 'value',",
             "    }\"></div>"
@@ -72,6 +75,8 @@
             "    data-win-options=\"{",
             "        label: '$2',",
             "        tooltip: '',",
+            "        required: ${3:false},",
+            "        disabled: ${4:false},",
             "        displayValueFormat: 'dd.MM.yyyy',",
             "        parseFormats: ['dd.MM.yyyy', 'ddMMyyyy', 'dd/MM/yyyy', 'dd-MM-yyyy', 'd.M.yy', 'ddMMyy', 'd/M/yy', 'd-M-yy'],",
             "    }\"></div>"
@@ -87,6 +92,8 @@
             "    data-win-options=\"{",
             "        label: '$2',",
             "        tooltip: '',",
+            "        required: ${3:false},",
+            "        disabled: ${4:false},",
             "    }\"></div>"
         ],
         "description": "Creates a Drawingcontrol input field"
@@ -113,6 +120,8 @@
             "    data-win-options=\"{",
             "        label: '$2',",
             "        tooltip: '',",
+            "        required: ${3:false},",
+            "        disabled: ${4:false},",
             "    }\"></div>"
         ],
         "description": "Creates a Inkcontrol input field"
@@ -126,6 +135,8 @@
             "    data-win-options=\"{",
             "        label: '$2',",
             "        tooltip: '',",
+            "        required: ${3:false},",
+            "        requiredFields: '$4',",
             "    }\"></div>"
         ],
         "description": "Creates a Label"
@@ -169,8 +180,10 @@
             "    data-win-options=\"{",
             "        label: '$2',",
             "        tooltip: '',",
-            "        spinners: ${3:false},",
-            "        disableOpenDialog: ${4:true},",
+            "        required: ${3:false},",
+            "        disabled: ${4:false},",
+            "        spinners: ${5:false},",
+            "        disableOpenDialog: ${6:true},",
             "    }\" ></div>"
         ],
         "description": "Creates a NumericField input field"
@@ -199,8 +212,10 @@
             "    data-win-options=\"{",
             "        label: '$2',",
             "        tooltip: '',",
-            "        features: ${3:['picture','camera']},",
-            "        size: ${4:2},",
+            "        required: ${3:false},",
+            "        disabled: ${4:false},",
+            "        features: ${5:['picture','camera']},",
+            "        size: ${6:2},",
             "    }\"></div>"
         ],
         "description": "Creates a Picture Picker"
@@ -217,6 +232,7 @@
             "    data-win-options=\"{",
             "        label: '$4',",
             "        defaultValue: ${5:false},",
+            "        style: '${6:backgroundHighlight}',",
             "    }\">"
         ],
         "description": "Creates a RadioBox input field"
@@ -245,6 +261,8 @@
             "    data-win-options=\"{",
             "        label: '$2',",
             "        tooltip: '',",
+            "        required: ${3:false},",
+            "        disabled: ${4:false},",
             "    }\">",
             "    <option value=\"${3:value}\"></option>",
             "</select>"
@@ -260,6 +278,7 @@
             "    data-win-options=\"{",
             "        label: '$2',",
             "        tooltip: '',",
+            "        required: ${3:false},",
             "    }\"></div>"
         ],
         "description": "Creates a Signature input field"
@@ -274,6 +293,8 @@
             "    data-win-options=\"{",
             "        label: '$3',",
             "        tooltip: '',",
+            "        required: ${4:false},",
+            "        disabled: ${5:false},",
             "    }\">"
         ],
         "description": "Creates a Text input field"
@@ -288,9 +309,11 @@
             "    data-win-options=\"{",
             "        label: '$2',",
             "        tooltip: '',",
+            "        required: ${3:false},",
+            "        disabled: ${4:false},",
             "        validator: {",
             "            pattern: '[\\+]{1}[0-9]{1,3}[ ]{1}[\\(]{0,1}[1-9][0-9]{0,3}[\\)]{0,1}[ ]{1}[0-9 ]{3,15}',",
-            "            errorText: '$3',",
+            "            errorText: '$5',",
             "        },",
             "    }\">"
         ],
@@ -307,8 +330,10 @@
             "    data-win-options=\"{",
             "        label: '$3',",
             "        tooltip: '',",
-            "        autoResize: ${4:true},",
-            "        charCounter: ${5:false},",
+            "        required: ${4:false},",
+            "        disabled: ${5:false},",
+            "        autoResize: ${6:true},",
+            "        charCounter: ${7:false},",
             "    }\"></textarea>"
         ],
         "description": "Creates a textarea"
@@ -322,6 +347,8 @@
             "    data-win-options=\"{",
             "        label: '$2',",
             "        tooltip: '',",
+            "        required: ${3:false},",
+            "        disabled: ${4:false},",
             "    }\"></div>"
         ],
         "description": "Creates a Time Picker input field"
@@ -334,6 +361,8 @@
             "    data-win-options=\"{",
             "        label: '$2',",
             "        tooltip: '',",
+            "        required: ${3:false},",
+            "        disabled: ${4:false},",
             "    }\"></div>"
         ],
         "description": "Creates a TreeView"
