@@ -1,14 +1,12 @@
 {
-    "Title Attribute": {
+    "TitleAttribute": {
         "scope": "html",
         "prefix": "hf-title-attr",
-        "body": [
-            "data-hf-title=\"$1\""
-        ],
-        "description": "Creates a data-hf-condition attribute"
+        "body": ["data-hf-title=\"$1\""],
+        "description": "Creates a data-hf-title attribute"
     },
 
-    "Condition Attribute": {
+    "ConditionAttribute": {
         "scope": "html",
         "prefix": "hf-condition-attr",
         "body": [

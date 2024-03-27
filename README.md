@@ -24,12 +24,16 @@ You don't need to type any dashes: "hfcustomcontrol" -> "hf-customcontrol" snipp
 
 #### **Block Snippets**
 
-| Snippet              | Description                                      |
-| -------------------- | ------------------------------------------------ |
-| hf-block             | Creates an empty block container                 |
-| hf-condition         | Creates a block, area, tab, condition definition |
-| hf-pagecondition     | Creates a Page condition definition              |
-| hf-templatecondition | Creates a Template condition definition          |
+| Snippet            | Description                                      |
+| ------------------ | ------------------------------------------------ |
+| hf-block           | Creates an empty block container                 |
+| hf-condition       | Creates a block, area, tab, condition definition |
+| hf-pagetemplate    | Creates a Page template                          |
+| hf-tabtemplate     | Creates a Tab template                           |
+| hf-fullwidth-block | Creates a FullWidth block definition             |
+| hf-observefield    | Creates a ObserveField element                   |
+| hf-dateformater    | Creates a DateFormater element                   |
+| hf-textcontent     | Creates a text content element                   |
 
 #### **FormControl Snippets**
 
@@ -64,6 +68,7 @@ You don't need to type any dashes: "hfcustomcontrol" -> "hf-customcontrol" snipp
 
 | Snippet           | Description                           |
 | ----------------- | ------------------------------------- |
+| hf-title-attr     | Creates a data-hf-title attribute     |
 | hf-condition-attr | Creates a data-hf-condition attribute |
 
 ### Stages Snippets

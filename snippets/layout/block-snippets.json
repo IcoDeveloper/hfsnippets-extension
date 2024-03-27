@@ -1,62 +1,17 @@
 {
-	"Template": {
-		"scope": "html",
-		"prefix": "hf-block",
-		"body": [
-			"<div id=\"${1:id}\"",
-            "    data-win-control=\"WinJS.Binding.Template\">",     
-            "    $2",
-			"</div>"
-		],
-		"description": "Creates an empty block container"
-	},
+    "Template": {
+        "scope": "html",
+        "prefix": "hf-block",
+        "body": ["<div id=\"${1:id}\"", "    data-win-control=\"WinJS.Binding.Template\">", "    $2", "</div>"],
+        "description": "Creates an empty block container"
+    },
 
     "Condition": {
-		"scope": "html",
-		"prefix": "hf-condition",
-		"body": [
-			"<div id=\"${1:id}\"",
+        "scope": "html",
+        "prefix": "hf-condition",
+        "body": [
+            "<div id=\"${1:id}\"",
             "    data-win-control=\"HFWinJSCtrl.Condition\"",
-			"    data-hf-condition='{",
-            "        \"cond\": [{",
-            "            \"type\": \"$2\",",
-            "            \"id\": \"$3\",",
-            "            \"val\": \"$4\"",
-			"        }],",
-            "        \"else\": \"${5:invisible}\"",
-            "    }'>",
-			"    $6",
-			"</div>"
-		],
-		"description": "Creates a block, area, tab, condition definition"
-	},
-
-	"Page Condition": {
-		"scope": "html",
-		"prefix": "hf-pagecondition",
-		"body": [
-			"<li data-hf-title=\"$1\"", 
-			"    data-hf-condition='{",
-            "        \"cond\": [{",
-            "            \"type\": \"$2\",",
-            "            \"id\": \"$3\",",
-            "            \"val\": \"$4\"",
-			"        }],",
-            "        \"else\": \"${5:invisible}\"",
-            "    }'>",
-			"    <ol>",
-            "        $6",
-			"    </ol>",
-			"</li>"
-		],
-		"description": "Creates a Page condition definition"
-	},
-
-	"Template Condition": {
-		"scope": "html",
-		"prefix": "hf-templatecondition",
-		"body": [
-			"<li data-hf-title=\"${1:Tab Name}\"", 
             "    data-hf-condition='{",
             "        \"cond\": [{",
             "            \"type\": \"$2\",",
@@ -66,8 +21,65 @@
             "        \"else\": \"${5:invisible}\"",
             "    }'>",
             "    $6",
-            "</li>"
-		],
-		"description": "Creates a Template condition definition"
-	}
+            "</div>"
+        ],
+        "description": "Creates a block, area, tab, condition definition"
+    },
+
+    "PageTemplate": {
+        "scope": "html",
+        "prefix": "hf-pagetemplate",
+        "body": ["<li data-hf-title=\"$1\">", "    <ol>", "        $2", "    </ol>", "</li>"],
+        "description": "Creates a Page template"
+    },
+
+    "TabTemplate": {
+        "scope": "html",
+        "prefix": "hf-tabtemplate",
+        "body": ["<li data-hf-title=\"$1\">", "    $2", "</li>"],
+        "description": "Creates a Tab template"
+    },
+
+    "FullWidthBlock": {
+        "scope": "html",
+        "prefix": "hf-fullwidth-block",
+        "body": ["<a href=\"$1\"", "    data-hf-fullWidth=\"true\"></a>"],
+        "description": "Creates a FullWidth block definition"
+    },
+
+    "ObserveField": {
+        "scope": "html",
+        "prefix": "hf-observefield",
+        "body": [
+            "<span data-win-control=\"HFWinJSCtrl.ObserveField\"",
+            "    data-win-options=\"{",
+            "        fieldId: '${1:list_field}',",
+            "    }\"></span>"
+        ],
+        "description": "Creates a ObserveField element"
+    },
+
+    "DateFormater": {
+        "scope": "html",
+        "prefix": "hf-dateformater",
+        "body": [
+            "<span data-win-bind=\"textContent: listData.${1:list_field}\"",
+            "    data-win-control=\"HFWinJSCtrl.DateFormater\"",
+            "    data-win-options=\"{ ",
+            "        dateFormat: '',",
+            "        timeFormat: '',",
+            "        dateOnly: false,",
+            "        timeOnly: false,",
+            "    }\"",
+            "></span>"
+        ],
+        "description": "Creates a DateFormater element"
+    },
+
+    "TextContent": {
+        "scope": "html",
+        "prefix": "hf-textcontent",
+        "body": ["<span data-win-bind=\"textContent: listData.${1:list_field}\"></span>"],
+        "description": "Creates a text content element"
+    }
 }
