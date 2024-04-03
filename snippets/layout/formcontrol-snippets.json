@@ -7,8 +7,8 @@
             "    data-win-control=\"HFWinJSCtrl.ButtonControl\"",
             "    data-win-options=\"{",
             "        buttonType: '${2:large}',",
-            "        buttonLabel: '${3:label}',",
-            "        buttonHeading: '${4:heading}',",
+            "        buttonHeading: '${3:heading}',",
+            "        buttonLabel: '${4:label}',",
             "        callback: ${5:callback},",
             "    }\"></div>"
         ],
