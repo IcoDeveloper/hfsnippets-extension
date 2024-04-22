@@ -4,7 +4,25 @@
 
 All code snippets are based on and follow the official TemplateReferenceGuide and JavaScriptGuidance
 
-# Usage
+## Table of Contents
+
+- [HybridForms Snippets](#hybridforms-snippets)
+  - [Table of Contents](#table-of-contents)
+  - [Usage](#usage)
+    - [hf-combobox](#hf-combobox)
+    - [hf-js](#hf-js)
+  - [Pro Tip](#pro-tip)
+    - [HTML Snippets](#html-snippets)
+      - [Block Snippets](#block-snippets)
+      - [FormControl Snippets](#formcontrol-snippets)
+      - [Attribute Snippets](#attribute-snippets)
+    - [Stages Snippets](#stages-snippets)
+    - [TypeScript Snippets](#typescript-snippets)
+    - [JavaScript Snippets](#javascript-snippets)
+    - [Extended Snippets](#extended-snippets)
+  - [License](#license)
+
+## Usage
 
 All snippets starts with "hf-". Type part of a snippet, press enter, and the snippet unfolds.
 
@@ -16,13 +34,13 @@ All snippets starts with "hf-". Type part of a snippet, press enter, and the sni
 
 ![hf-js](images/hf-js.gif)
 
-# Pro Tip
+## Pro Tip
 
 You don't need to type any dashes: "hfcustomcontrol" -> "hf-customcontrol" snippet
 
 ### HTML Snippets
 
-#### **Block Snippets**
+#### Block Snippets
 
 | Snippet            | Description                                      |
 | ------------------ | ------------------------------------------------ |
@@ -35,13 +53,14 @@ You don't need to type any dashes: "hfcustomcontrol" -> "hf-customcontrol" snipp
 | hf-dateformater    | Creates a DateFormater element                   |
 | hf-textcontent     | Creates a text content element                   |
 
-#### **FormControl Snippets**
+#### FormControl Snippets
 
 | Snippet                    | Description                           |
 | -------------------------- | ------------------------------------- |
 | hf-buttoncontrol           | Creates a ButtonControl               |
 | hf-checkbox                | Creates a Checkbox                    |
 | hf-combobox                | Creates a Combobox input field        |
+| hf-datacontrol             | Creates a DataControl field           |
 | hf-datepicker              | Creates a Datepicker input field      |
 | hf-drawingcontrol          | Creates a Drawingcontrol input field  |
 | hf-dropdownlist            | Creates a DropDownList input field    |
@@ -64,7 +83,7 @@ You don't need to type any dashes: "hfcustomcontrol" -> "hf-customcontrol" snipp
 | hf-treeview                | Creates a TreeView                    |
 | hf-webview                 | Creates a Webview                     |
 
-#### **Attribute Snippets**
+#### Attribute Snippets
 
 | Snippet           | Description                           |
 | ----------------- | ------------------------------------- |
@@ -119,3 +138,7 @@ These snippets must be executed in all specified file types in order to obtain a
 | ----------------- | -------------- | ----------------------------- |
 | hf-repeatinginput | HTML, SCSS, TS | Add RepeatingInput to project |
 | hf-initializr     | HTML, TS       | Add Initializr block to file  |
+
+## License
+
+[MIT License](https://github.com/IcoDeveloper/hfsnippets-extension/blob/master/LICENSE) © 2024 icomedias GmbH.

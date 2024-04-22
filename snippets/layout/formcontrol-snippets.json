@@ -66,6 +66,16 @@
         ],
         "description": "Creates a DropDownList input field"
     },
+    "DataControl": {
+        "scope": "html",
+        "prefix": "hf-datacontrol",
+        "body": [
+            "<div id=\"${1:id}\"",
+            "    data-win-control=\"HFWinJSCtrl.DataControl\"",
+            "    data-win-options=\"{}\"></div>"
+        ],
+        "description": "Creates a DataControl field"
+    },
     "DatePicker": {
         "scope": "html",
         "prefix": "hf-datepicker",
