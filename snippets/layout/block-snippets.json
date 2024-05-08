@@ -13,6 +13,7 @@
             "<div id=\"${1:id}\"",
             "    data-win-control=\"HFWinJSCtrl.Condition\"",
             "    data-hf-condition='{",
+            "        \"op\": \"and\",",
             "        \"cond\": [{",
             "            \"type\": \"$2\",",
             "            \"id\": \"$3\",",

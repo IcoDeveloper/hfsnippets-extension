@@ -11,6 +11,7 @@
         "prefix": "hf-condition-attr",
         "body": [
             "data-hf-condition='{",
+            "    \"op\": \"and\",",
             "    \"cond\": [{",
             "        \"type\": \"$1\",",
             "        \"id\": \"$2\",",
