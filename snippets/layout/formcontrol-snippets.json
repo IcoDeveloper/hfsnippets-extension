@@ -1,4 +1,16 @@
 {
+    "BooleanControl": {
+        "scope": "html",
+        "prefix": "hf-booleancontrol",
+        "body": [
+            "<div id=\"${1:id}\"",
+            "    data-win-control=\"HFWinJSCtrl.BooleanControl\"",
+            "    data-win-options=\"{",
+            "        defaultValue: ${2:false},",
+            "    }\"></div>"
+        ],
+        "description": "Creates a BooleanControl"
+    },
     "ButtonControl": {
         "scope": "html",
         "prefix": "hf-buttoncontrol",
